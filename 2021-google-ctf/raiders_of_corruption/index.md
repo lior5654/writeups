@@ -2,6 +2,10 @@
 
 [Go Back](../index.md)
 
+<img src="./images/challenge_page.png" width="30%" height="30%"/>
+
+---------
+
 # Raiders of Corruption [52 solves, 197pt]
 
 ## Challenge Description
