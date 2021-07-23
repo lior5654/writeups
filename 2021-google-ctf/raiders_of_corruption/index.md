@@ -2,7 +2,7 @@
 
 [Go Back](../index.md)
 
-<img src="images/challenge_page.png" width="40%" height="40%"/>
+<img src="images/challenge_page.png" width="50%" height="50%"/>
 
 ---------
 
