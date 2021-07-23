@@ -2,8 +2,6 @@
 
 [Go Back](../index.md)
 
-<img src="images/challenge_page.png" width="50%" height="50%"/>
-
 ---------
 
 # Raiders of Corruption [52 solves, 197pt]
@@ -17,3 +15,5 @@
 ## Solution
 
 TODO: write a solution explanation
+
+<img src="images/challenge_page.png" width="50%" height="50%"/>
