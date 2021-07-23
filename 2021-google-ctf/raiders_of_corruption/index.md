@@ -20,7 +20,7 @@ We begin by downloading the `.zip` file attached in the challenge's description 
 
 {TODO: ADD WGET AND EXTARCT COMMAND AND LS OUTPUT}
 
-As we can see, the attached `zip` contained 10 `.img` files. Let's analyze them.
+As we can see, the attached `zip` file contains 10 `.img` files. Let's analyze them.
 
 {TODO: ADD FILE COMMAND OUTPUT}
 
