@@ -1,8 +1,8 @@
-## ls
+## lior@wildboar:/# ls
 
 [Google CTF 2021](./2021-google-ctf/index.md).
 
-## cat ./where_am_i.cpp
+## lior@wildboar:/# cat ./page_description.cpp
 
 ```c++
 signed main(void)
@@ -12,6 +12,6 @@ signed main(void)
     std::cout << "Main Menu" << '\n';
     std::cout << "press the name of a CTF in the above list if you wish to see a writeup for a challenge that appeared on that CTF" << '\n';
     
-    return 42;
+    return 0x1337;
 }
 ```
