@@ -14,6 +14,14 @@
 
 ## Solution
 
-TODO: write a solution explanation
+### Preface: Analysis & Setting Up the Battle Scene
+
+We begin by downloading the `.zip` file attached in the challenge's description and extracting the challenge files from it.
+
+{TODO: ADD WGET AND EXTARCT COMMAND AND LS OUTPUT}
+
+As we can see, the attached `zip` contained 10 `.img` files. Let's analyze them.
+
+{TODO: ADD FILE COMMAND OUTPUT}
 
 <img src="images/challenge_page.png" width="50%" height="50%"/>
