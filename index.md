@@ -1,6 +1,7 @@
 ## lior@wildboar:/# ls
 
 [Google CTF 2021](./2021-google-ctf/index.md)
+[CryptoCTF 2021](./2021-crypto-ctf/index.md)
 
 ## lior@wildboar:/# cat ./page_description.cpp
 
