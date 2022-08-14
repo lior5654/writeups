@@ -6,6 +6,8 @@
 
 # Raiders of Corruption [52 solves, 197pt]
 
+# THIS IS AN OLD UNFINISHED WRITEUP, NOT DONE !
+
 ## Challenge Description
 
 > Picked up these at a yardsale, there doesn't seem to be anything useful in there though!

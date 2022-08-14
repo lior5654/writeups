@@ -97,34 +97,39 @@ if __name__ == '__main__':
 	main()
 ```
 
-We observe that the challenge is finding an RSA public key (e), private (d) key and 3 rsa moduli (3 pairs of primes pi, qi) where log2(p) >= 160 && log2(q) >= 160. The difficult part in the challenge is that it enforces e,d <= min(phi(ni)).
+We observe that the challenge is finding an RSA public key ($e$), private ($d$) key and $3$ RSA moduli ($3$ pairs of primes $p_i, q_i$) where $\log_2(p) \ge 160$ & $\log_2(q) \ge 160$. The difficult part in the challenge is that it enforces $e,d \le \min\limits_{i}(\phi(n_i))$.
 
 ### CRT is your best friend, utilize it in a creative way!
 
 We know:
 
-e*d == 1 mod (p1-1)(q1-1)
+$ed \equiv 1 \pmod{(p_1-1)(q_1-1)}$
 
-e*d == 1 mod (p2-1)(q2-1)
+$ed \equiv 1 \pmod{(p_2-1)(q_2-1)}$
 
-e*d == 1 mod (p3-1)(q3-1)
+$ed \equiv 1 \pmod{(p_3-1)(q_3-1)}$
 
 
-Chinese Remainder Theorem implies that for this conqurence system there exists a unique solution N=e*d mod LCM((p1-1)(q1-1), (p2-1)(q2-1), (p3-1)(q3-1))
+Chinese Remainder Theorem implies that for this conqurence system there exists a unique solution $N=ed \pmod{\text{lcm}((p1-1)(q1-1), (p2-1)(q2-1), (p3-1)(q3-1))}$
 
-So, we want the LCM to be relatively small, and let e*d = LCM + 1
+So, we want the LCM to be relatively small, and let $ed = \text{lcm}(\dots) + 1$
 
-The idea: if we pick three primes p, q, r
+The idea: if we pick three primes $p, q, r$
 
-(p1, q1) = p, q
+$(p_1, q_1) = p, q$
 
-(p2, q2) = q, r
+$(p_2, q_2) = q, r$
 
-(p3, q3) = r, p
+$(p_3, q_3) = r, p$
 
-LCM((p1-1)(q1-1), (p2-1)(q2-1), (p3-1)(q3-1)) = LCM((p-1)(q-1), (q-1)(r-1), (p-1)(r-1)) <= (p-1)(r-1)(q-1), ~O(Ni^1.5)
+$$
+\text{lcm}{((p1-1)(q1-1), (p2-1)(q2-1), (p3-1)(q3-1))} = \\
+= \text{lcm}{((p-1)(q-1), (q-1)(r-1), (p-1)(r-1))} \le\\ 
+\le (p-1)(r-1)(q-1),
+$$
+Which is roughly ~$O(N_i^{1.5})$
 
-for the LCM to be even smaller, we find primes of the form k*2^big + 1 (let big be 160) and based on dirichlet distribution there should be many of them.
+for the LCM to be even smaller, we find primes of the form $2^{\text{big}} \cdot k + 1$ (let $\text{big} = 160$) and based on dirichlet distribution there should be many of them.
 
 ```py
 from Crypto.Util.number import getPrime, isPrime
@@ -176,7 +181,7 @@ if __name__ == "__main__":
 	main()
 ```
 
-factorize e*d via factordb.com and pick 2 factors, and task DONE!
+factorize $ed$ via factordb.com and pick $2$ factors, and task DONE!
 
 Flag:
 
